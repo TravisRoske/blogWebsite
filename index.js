@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const rateLimiter = require("express-rate-limit")
 const mongoose = require('mongoose');
-const Post = require("./postSchema")
 
 const app = express();
 
