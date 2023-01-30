@@ -25,8 +25,6 @@ router.route('/')
 })
 
 
-
-
 router.route('/:id')
 .get((req, res) => {        // Get a specific blog post by ID
     Post.findById(req.params.id, (err, post) => {
