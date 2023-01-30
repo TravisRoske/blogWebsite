@@ -3,11 +3,15 @@ const bodyParser = require('body-parser');
 const rateLimiter = require("express-rate-limit")
 const mongoose = require('mongoose');
 
+
 const app = express();
+
 
 app.use(bodyParser.json());
 
+
 mongoose.connect('mongodb://localhost/blog', { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
